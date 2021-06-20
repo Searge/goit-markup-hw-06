@@ -1,0 +1,810 @@
+:root {
+  --primary-bg-color: #fff;
+  --secondary-bg: #f5f4fa;
+  --ternary-bg: #2f303a;
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --logo-color: #000;
+  --accent: #2196f3;
+  --project-accent: rgba(33, 150, 243, 0.9);
+  --border-color: #ececec;
+  --border-box-color: #eeeeee;
+  --ternary-buttons: #afb1b8;
+  --footer-links-color: rgba(255, 255, 255, 0.6);
+  --backdrop-bg: rgba(0, 0, 0, 0.2);
+  /* Fonts */
+  --main-font: 'Roboto', sans-serif;
+  --logo-font: 'Raleway', sans-serif;
+  /* Animation */
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: var(--primary-bg-color);
+  color: var(--primary-text-color);
+
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+   .d8888b.
+  d88P  Y88b
+  888    888
+  888         .d88b.  88888b.d88b.  88888b.d88b.   .d88b.  88888b.
+  888        d88""88b 888 "888 "88b 888 "888 "88b d88""88b 888 "88b
+  888    888 888  888 888  888  888 888  888  888 888  888 888  888
+  Y88b  d88P Y88..88P 888  888  888 888  888  888 Y88..88P 888  888
+   "Y8888P"   "Y88P"  888  888  888 888  888  888  "Y88P"  888  888
+*/
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* Wrapper */
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*
+_  _ ____ ____ ___  ____ ____
+|__| |___ |__| |  \ |___ |__/
+|  | |___ |  | |__/ |___ |  \
+
+*/
+.page-header {
+  color: var(--logo-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.page-header > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+}
+.navigation .logo__link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/*
+ |   _   _   _
+ |_ (_) (_| (_)
+         _|
+*/
+.logo {
+  display: flex;
+  font-family: var(--logo-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.logo__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo__accent {
+  color: var(--accent);
+}
+
+/*
+ |\/|  _  ._
+ |  | (/_ | | |_|
+*/
+.menu {
+  display: flex;
+  margin-left: 90px;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* Site nav */
+.menu__link {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--title-text-color);
+  transition: color 250ms var(--cubic);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.current,
+.menu__link:hover,
+.menu__link:focus {
+  color: var(--accent);
+}
+
+/* Blue bar */
+.menu__link::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  content: '';
+  background-color: var(--accent);
+  transition: opacity 250ms var(--cubic);
+  opacity: 0;
+}
+
+.menu__link.current::after,
+.menu__link:hover:after {
+  opacity: 1;
+}
+
+/*
+____ ____ _  _ ___ ____ ____ ___ ____
+|    |  | |\ |  |  |__| |     |  [__
+|___ |__| | \|  |  |  | |___  |  ___]
+*/
+.contacts {
+  font-style: normal;
+}
+
+/* Contacts Header */
+.page-header .contacts {
+  display: flex;
+}
+
+.main-nav.contacts__item > .contacts__link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.main-nav.contacts__item + .main-nav.contacts__item {
+  margin-left: 50px;
+}
+
+.link-icon {
+  fill: currentColor;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}
+
+.contacts__link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--primary-text-color);
+  transition: color 250ms var(--cubic);
+}
+
+.contacts__link:hover,
+.contacts__link:focus {
+  color: var(--accent);
+}
+
+/*
+____ ____ ____ ___ ____ ____
+|___ |  | |  |  |  |___ |__/
+|    |__| |__|  |  |___ |  \
+*/
+.footer {
+  background-color: var(--ternary-bg);
+  color: var(--primary-bg-color);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.footer-main {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer.container {
+  display: flex;
+}
+
+.footer__item > .logo {
+  margin-bottom: 20px;
+}
+
+.footer.contacts__link {
+  color: var(--footer-links-color);
+  transition: color 250ms var(--cubic);
+}
+
+.footer.contacts__link:hover,
+.footer.contacts__link:focus {
+  color: var(--accent);
+}
+
+.footer.contacts__item {
+  margin-top: 9px;
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 70px;
+}
+
+/*
+ _ ____ _ _  _
+ | |  | | |\ |
+_| |__| | | \|
+
+*/
+.join__social {
+  display: flex;
+}
+
+.join__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.join__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.join.social__link {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--primary-bg-color);
+}
+
+/*
+___  _  _ ___ ___ ____ _  _ ____
+|__] |  |  |   |  |  | |\ | [__
+|__] |__|  |   |  |__| | \| ___]
+*/
+.button {
+  color: var(--primary-bg-color);
+  background-color: var(--accent);
+  border-radius: 4px;
+  border: none;
+  display: inline-block;
+  padding: 10px 32px;
+  min-width: 200px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 250ms var(--cubic);
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/*
+  888b     d888          d8b
+  8888b   d8888          Y8P
+  88888b.d88888
+  888Y88888P888  8888b.  888 88888b.
+  888 Y888P 888     "88b 888 888 "88b
+  888  Y8P  888 .d888888 888 888  888
+  888   "   888 888  888 888 888  888
+  888       888 "Y888888 888 888  888
+*/
+
+/*
+_  _ ____ ____ ____
+|__| |___ |__/ |  |
+|  | |___ |  \ |__|
+*/
+.hero {
+  background-color: var(--ternary-bg);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/hero_bg.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  max-width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero > .container {
+  padding: 200px 0;
+  width: 696px;
+}
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  color: var(--primary-bg-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/*
+|V| _  _| _  |
+| |(_)(_|(_| |
+*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--backdrop-bg);
+  transition: opacity 250ms var(--cubic);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  width: 528px;
+  height: 581px;
+
+  opacity: 0;
+  transition: opacity 250ms var(--cubic), transform 250ms var(--cubic);
+
+  background: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.cross-icon {
+  width: 11px;
+  fill: var(--logo-color);
+}
+
+/*
+____ ____ ____ ___ _ ____ _  _ ____
+[__  |___ |     |  | |  | |\ | [__
+___] |___ |___  |  | |__| | \| ___]
+*/
+.section__heading {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/*
+____ ____ ____ ___ _  _ ____ ____ ____
+|___ |___ |__|  |  |  | |__/ |___ [__
+|    |___ |  |  |  |__| |  \ |___ ___]
+*/
+.features__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+}
+
+.features.list {
+  display: flex;
+}
+
+.features__item {
+  width: 270px;
+}
+
+.features__item + .features__item {
+  margin-left: 30px;
+}
+
+.features p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*
+_ ____ ____ _  _ ____
+| |    |  | |\ | [__
+| |___ |__| | \| ___]
+
+*/
+
+.icon__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--secondary-bg);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.features-icon {
+  width: 70px;
+  height: 70px;
+}
+
+/*
+___  ____ _  _ ____ _    ____ ___  _  _ ____ _  _ ___
+|  \ |___ |  | |___ |    |  | |__] |\/| |___ |\ |  |
+|__/ |___  \/  |___ |___ |__| |    |  | |___ | \|  |
+
+*/
+
+.section.development {
+  padding-top: 0;
+}
+
+.dev.list {
+  display: flex;
+}
+
+.dev__item + .dev__item {
+  margin-left: 30px;
+}
+
+/*
+___ ____ ____ _  _
+ |  |___ |__| |\/|
+ |  |___ |  | |  |
+
+*/
+.section.team {
+  background-color: var(--secondary-bg);
+}
+
+.team.list {
+  display: flex;
+}
+
+.team__item + .team__item {
+  margin-left: 30px;
+}
+
+.team__item {
+  padding-bottom: 30px;
+  background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.team__title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: var(--title-text-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.team__item p {
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+/*
+_ ____ ____ _  _ ____
+| |    |  | |\ | [__
+| |___ |__| | \| ___]
+
+*/
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--ternary-buttons);
+  transition: background-color 250ms var(--cubic), color 250ms var(--cubic);
+}
+.social__link:hover,
+.social__link:focus {
+  color: var(--primary-bg-color);
+  background-color: var(--accent);
+}
+
+.social-icon {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+}
+
+/*
+___  ____ ____ ___ _  _ ____ ____ ____
+|__] |__| |__/  |  |\ | |___ |__/ [__
+|    |  | |  \  |  | \| |___ |  \ ___]
+*/
+
+.partners {
+  text-align: center;
+}
+
+.partners__list {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
+.partners__items:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Partners links & icons */
+.partners__link {
+  display: flex;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border-radius: 4px;
+  border: 1px solid var(--ternary-buttons);
+  color: var(--ternary-buttons);
+  transition: color 250ms var(--cubic), border-color 250ms var(--cubic);
+  margin: 0;
+}
+
+.partners__link:hover,
+.partners__link:focus {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.partner-icon {
+  fill: currentColor;
+  height: 50px;
+}
+
+/*
+  8888888b.                  888     .d888         888 d8b
+  888   Y88b                 888    d88P"          888 Y8P
+  888    888                 888    888            888
+  888   d88P .d88b.  888d888 888888 888888 .d88b.  888 888  .d88b.
+  8888888P" d88""88b 888P"   888    888   d88""88b 888 888 d88""88b
+  888       888  888 888     888    888   888  888 888 888 888  888
+  888       Y88..88P 888     Y88b.  888   Y88..88P 888 888 Y88..88P
+  888        "Y88P"  888      "Y888 888    "Y88P"  888 888  "Y88P"
+*/
+
+/*
+____ _ _    ___ ____ ____
+|___ | |     |  |___ |__/
+|    | |___  |  |___ |  \
+*/
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/*
+  _                   _
+ |_ o | _|_  _  ._   |_)    _|_ _|_  _  ._   _
+ |  | |  |_ (/_ |    |_) |_| |_  |_ (_) | | _>
+*/
+.filter__btn {
+  min-width: 73px;
+  padding: 6px 22px;
+  background-color: var(--secondary-bg);
+  color: var(--title-text-color);
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
+}
+
+.filter__btn.active,
+.filter__btn:hover,
+.filter__btn:focus {
+  background-color: var(--accent);
+  color: var(--primary-bg-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/*
+___  ____ ____  _ ____ ____ ___ ____
+|__] |__/ |  |  | |___ |     |  [__
+|    |  \ |__| _| |___ |___  |  ___]
+*/
+.project {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project__container {
+  border: 1px solid var(--border-box-color);
+  border-top: none;
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+}
+
+.project__item:hover {
+  transition: box-shadow 250ms var(--cubic);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.project__item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.project__item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+/* Project text */
+.project__title {
+  margin: 0;
+  color: var(--title-text-color);
+  font-size: 18px;
+  line-height: 2;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.project__descriptioon {
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/*
+___
+ | |_    __ |_  _
+ | | ||_|||||_)_>
+
+ _ __  o __  _ _|_ o  _ __
+(_|| | | |||(_| |_ | (_)| |
+*/
+.thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.full-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--project-accent);
+
+  transform: translateY(100%);
+  opacity: 1;
+
+  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
+}
+
+.project__item:hover .full-description {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.project-about {
+  color: var(--primary-bg-color);
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  margin: 0;
+}
