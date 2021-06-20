@@ -6,12 +6,14 @@
   --title-text-color: #212121;
   --logo-color: #000;
   --accent: #2196f3;
+  --accent-hover: #188ce8;
   --project-accent: rgba(33, 150, 243, 0.9);
   --border-color: #ececec;
   --border-box-color: #eeeeee;
   --ternary-buttons: #afb1b8;
   --footer-links-color: rgba(255, 255, 255, 0.6);
   --backdrop-bg: rgba(0, 0, 0, 0.2);
+  --dev-bg: rgba(47, 48, 58, 0.8);
   /* Fonts */
   --main-font: 'Roboto', sans-serif;
   --logo-font: 'Raleway', sans-serif;
@@ -176,7 +178,7 @@ _  _ ____ ____ ___  ____ ____
 }
 
 /* Blue bar */
-.menu__link::after {
+.menu__link.current::after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -189,13 +191,13 @@ _  _ ____ ____ ___  ____ ____
   content: '';
   background-color: var(--accent);
   transition: opacity 250ms var(--cubic);
-  opacity: 0;
-}
-
-.menu__link.current::after,
-.menu__link:hover:after {
   opacity: 1;
 }
+
+/* .menu__link.current::after,
+.menu__link:hover:after {
+  opacity: 1;
+} */
 
 /*
 ____ ____ _  _ ___ ____ ____ ___ ____
@@ -272,6 +274,7 @@ ____ ____ ____ ___ ____ ____
 .footer.contacts__link {
   color: var(--footer-links-color);
   transition: color 250ms var(--cubic);
+  font-weight: 400;
 }
 
 .footer.contacts__link:hover,
@@ -339,6 +342,7 @@ ___  _  _ ___ ___ ____ _  _ ____
 
 .button:hover,
 .button:focus {
+  background-color: var(--accent-hover);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -538,8 +542,34 @@ ___  ____ _  _ ____ _    ____ ___  _  _ ____ _  _ ___
   display: flex;
 }
 
+.dev__item {
+  position: relative;
+}
+
 .dev__item + .dev__item {
   margin-left: 30px;
+}
+
+/* Thumbs */
+.dev__desc {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 0;
+  background-color: var(--dev-bg);
+}
+
+.dev__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-bg-color);
 }
 
 /*
