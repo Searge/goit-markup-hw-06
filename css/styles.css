@@ -13,6 +13,7 @@
   --ternary-buttons: #afb1b8;
   --footer-links-color: rgba(255, 255, 255, 0.6);
   --backdrop-bg: rgba(0, 0, 0, 0.2);
+  --modal-form-border: rgba(33, 33, 33, 0.2);
   --dev-bg: rgba(47, 48, 58, 0.8);
   /* Fonts */
   --main-font: 'Roboto', sans-serif;
@@ -421,6 +422,8 @@ _  _ ____ ____ ____
   width: 528px;
   height: 581px;
 
+  padding: 40px;
+
   opacity: 0;
   transition: opacity 250ms var(--cubic), transform 250ms var(--cubic);
 
@@ -452,6 +455,43 @@ _  _ ____ ____ ____
 .cross-icon {
   width: 11px;
   fill: var(--logo-color);
+}
+
+/*
+ _____
+|   __|___ ___ _____ ___
+|   __| . |  _|     |_ -|
+|__|  |___|_| |_|_|_|___|
+*/
+.js-order-form {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+
+.js-order-form input {
+  padding: 11px 12px;
+  border: 1px solid var(--modal-form-border);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.js-order-form textarea {
+  width: 448px;
+  height: 120px;
+
+  border: 1px solid var(--modal-form-border);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.js-order-form textarea::placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
 }
 
 /*

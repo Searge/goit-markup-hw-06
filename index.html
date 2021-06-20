@@ -91,6 +91,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+          <!-- Order -->
           <button class="button" type="button" data-open-modal>
             Заказать услугу
           </button>
@@ -99,10 +100,34 @@
         <div class="backdrop is-hidden" data-backdrop>
           <div class="modal" data-modal>
             <button class="button-close" type="button" data-close-modal>
+              <!-- Close -->
               <svg class="cross-icon">
                 <use href="./images/icons/sprites.svg#cross"></use>
               </svg>
             </button>
+            <h3>Оставьте свои данные, мы вам перезвоним</h3>
+            <!-- Form -->
+            <form class="js-order-form">
+              <label for="name">Имя</label>
+              <input type="text" name="name" id="name" autofocus />
+              <label for="phone">Телефон</label>
+              <input type="tel" name="phone" id="phone" />
+              <label for="email">Почта</label>
+              <input type="email" name="email" id="email" />
+              <label for="comment">Комментарий</label>
+              <textarea
+                name="comment"
+                id="comment"
+                rows="8"
+                placeholder="Введите текст"
+              ></textarea>
+
+              <label for="policy"
+                ><input type="checkbox" name="policy" id="policy" checked />
+                Соглашаюсь с рассылкой и принимаю Условия договора</label
+              >
+              <button type="submit" class="button" disabled>Отправить</button>
+            </form>
           </div>
         </div>
       </section>
@@ -478,5 +503,6 @@
 
     <!-- Scripts -->
     <script src="./js/modal.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>
