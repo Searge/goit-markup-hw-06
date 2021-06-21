@@ -1,11 +1,14 @@
 (() => {
-  document.querySelector('.js-order-form').addEventListener('submit', e => {
-    e.preventDefault();
+  document
+    .querySelector('.order-form')
+    .addEventListener('submit', el => {
+      el.preventDefault();
 
-    new FormData(e.currentTarget).forEach((value, name) =>
-      console.log(`${name}: ${value}`),
-    );
+      new FormData(el.currentTarget)
+        .forEach((value, name) =>
+          console.log(`${name}: ${value}`),
+        );
 
-    e.currentTarget.reset();
-  });
+      el.currentTarget.reset();
+    });
 })();
