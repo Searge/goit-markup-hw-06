@@ -105,28 +105,59 @@
                 <use href="./images/icons/sprites.svg#cross"></use>
               </svg>
             </button>
-            <h3>Оставьте свои данные, мы вам перезвоним</h3>
+            <b class="modal__title">Оставьте свои данные, мы вам перезвоним</b>
             <!-- Form -->
-            <form class="js-order-form">
-              <label for="name">Имя</label>
-              <input type="text" name="name" id="name" autofocus />
-              <label for="phone">Телефон</label>
-              <input type="tel" name="phone" id="phone" />
-              <label for="email">Почта</label>
-              <input type="email" name="email" id="email" />
-              <label for="comment">Комментарий</label>
-              <textarea
-                name="comment"
-                id="comment"
-                rows="8"
-                placeholder="Введите текст"
-              ></textarea>
+            <form class="order-form">
+              <label class="order-form__item">
+                <p class="order-form__title-item">Имя</p>
 
-              <label for="policy"
-                ><input type="checkbox" name="policy" id="policy" checked />
-                Соглашаюсь с рассылкой и принимаю Условия договора</label
-              >
-              <button type="submit" class="button" disabled>Отправить</button>
+                <div class="order-form__conteiner">
+                  <input
+                    type="text"
+                    name="name"
+                    class="order-form__input"
+                    autofocus
+                  />
+                </div>
+              </label>
+              <label class="order-form__item">
+                <p class="order-form__title-item">Телефон</p>
+
+                <div class="order-form__conteiner">
+                  <input type="tel" name="phone" class="order-form__input" />
+                </div>
+              </label>
+              <label class="order-form__item">
+                <p class="order-form__title-item">Почта</p>
+
+                <div class="order-form__conteiner">
+                  <input type="email" name="email" class="order-form__input" />
+                </div>
+              </label>
+              <label class="order-form__textarea">
+                <p class="order-form__title-item">Комментарий</p>
+
+                <textarea
+                  name="comment"
+                  class="order-form__comment"
+                  rows="8"
+                  placeholder="Введите текст"
+                ></textarea>
+              </label>
+
+              <label class="order-form__policy">
+                <input
+                  type="checkbox"
+                  name="policy"
+                  class="order-form__checkbox"
+                />
+                <svg class="policy-icon">
+                  <use href="./images/icons/sprites.svg#check"></use>
+                </svg>
+                Соглашаюсь с рассылкой и принимаю
+                <a href="">Условия договора</a>
+              </label>
+              <button type="submit" class="button">Отправить</button>
             </form>
           </div>
         </div>

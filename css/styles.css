@@ -457,32 +457,54 @@ _  _ ____ ____ ____
   fill: var(--logo-color);
 }
 
+.modal__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  margin-bottom: 12px;
+}
+
 /*
  _____
 |   __|___ ___ _____ ___
 |   __| . |  _|     |_ -|
 |__|  |___|_| |_|_|_|___|
 */
-.js-order-form {
+.order-form {
   display: flex;
   flex-direction: column;
 
   text-align: left;
 }
 
-.js-order-form input {
+.order-form__item {
+  margin-bottom: 10px;
+}
+
+.order-form__textarea {
+  margin-bottom: 20px;
+}
+
+.order-form__title-item {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+
+.order-form__input {
+  width: 100%;
   padding: 11px 12px;
   border: 1px solid var(--modal-form-border);
   box-sizing: border-box;
   border-radius: 4px;
 }
 
-.js-order-form input[type='checkbox'] {
-  border: 1px solid var(--modal-form-border);
-}
-
-.js-order-form textarea {
-  width: 448px;
+.order-form__comment {
+  width: 100%;
   height: 120px;
 
   border: 1px solid var(--modal-form-border);
@@ -490,12 +512,32 @@ _  _ ____ ____ ____
   border-radius: 4px;
 }
 
-.js-order-form textarea::placeholder {
+.order-form__comment::placeholder {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
+}
+
+.order-form__policy {
+  margin-bottom: 30px;
+  line-height: 1.71;
+  text-align: center;
+}
+
+.order-form__checkbox {
+  border: 1px solid var(--modal-form-border);
+}
+
+.policy-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-color: var(--accent);
+  border-radius: 2px;
+  fill: white;
+  display: none;
 }
 
 /*
