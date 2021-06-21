@@ -530,14 +530,18 @@ _  _ ____ ____ ____
   border: 1px solid var(--modal-form-border);
 }
 
+/* Checkbox */
 .policy-icon {
+  position: absolute;
   display: inline-block;
   width: 16px;
   height: 15px;
   background-color: var(--accent);
   border-radius: 2px;
   fill: white;
-  display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 /*
