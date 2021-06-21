@@ -477,6 +477,10 @@ _  _ ____ ____ ____
   border-radius: 4px;
 }
 
+.js-order-form input[type='checkbox'] {
+  border: 1px solid var(--modal-form-border);
+}
+
 .js-order-form textarea {
   width: 448px;
   height: 120px;
