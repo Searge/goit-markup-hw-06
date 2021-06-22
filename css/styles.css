@@ -503,11 +503,12 @@ _  _ ____ ____ ____
 
 .cross-icon {
   width: 11px;
+  height: 11px;
   fill: var(--logo-color);
 }
 
-.cross-icon:hover,
-.cross-icon:focus {
+.button-close:hover > .cross-icon,
+.button-close:focus > .cross-icon {
   fill: var(--accent);
 }
 
@@ -632,12 +633,17 @@ _  _ ____ ____ ____
   border-radius: 2px;
 }
 
+.order-form__checkbox:focus + .policy-icon,
 .order-form__checkbox:checked + .policy-icon {
   border-color: transparent;
   background-color: var(--accent);
   background-image: url('../images/icons/check.svg');
   background-origin: border-box;
   background-size: contain;
+}
+
+.policy-text a {
+  color: var(--accent);
 }
 
 /*
