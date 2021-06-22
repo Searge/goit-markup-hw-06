@@ -272,6 +272,10 @@ ____ ____ ____ ___ ____ ____
   margin-bottom: 20px;
 }
 
+.footer.contacts {
+  width: 231px;
+}
+
 .footer.contacts__link {
   color: var(--footer-links-color);
   transition: color 250ms var(--cubic);
@@ -287,8 +291,13 @@ ____ ____ ____ ___ ____ ____
   margin-top: 9px;
 }
 
-.footer__item:not(:last-child) {
+/* Wierd Margins */
+.footer__item.address {
   margin-right: 70px;
+}
+
+.footer__item.join {
+  margin-right: 93px;
 }
 
 /*
@@ -304,6 +313,8 @@ _| |__| | | \|
 .footer__title {
   margin-bottom: 20px;
   font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -368,7 +379,7 @@ ___  _  _ ___ ___ ____ _  _ ____
 }
 
 .input-mail:focus {
-  color: var(--primary-bg-color)
+  color: var(--primary-bg-color);
 }
 
 .button-mail {
@@ -487,6 +498,7 @@ _  _ ____ ____ ____
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  background-color: transparent;
 }
 
 .cross-icon {
@@ -573,6 +585,7 @@ _  _ ____ ____ ____
   width: 100%;
   height: 120px;
   padding: 12px 16px;
+  resize: none;
 
   border: 1px solid var(--modal-form-border);
   box-sizing: border-box;
