@@ -301,7 +301,7 @@ _| |__| | | \|
   display: flex;
 }
 
-.join__title {
+.footer__title {
   margin-bottom: 20px;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -345,6 +345,43 @@ ___  _  _ ___ ___ ____ _  _ ____
 .button:focus {
   background-color: var(--accent-hover);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.form-subscribe {
+  display: flex;
+}
+
+.input-mail {
+  width: 358px;
+  margin-right: 12px;
+  padding: 15px 16px;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  color: var(--footer-links-color);
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.input-mail:focus {
+  color: var(--primary-bg-color)
+}
+
+.button-mail {
+  display: flex;
+  align-items: center;
+  padding: 13px 29px;
+}
+
+.icon-send {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  fill: var(--primary-bg-color);
 }
 
 /*
