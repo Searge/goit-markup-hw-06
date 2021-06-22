@@ -105,7 +105,10 @@
                 <use href="./images/icons/sprites.svg#cross"></use>
               </svg>
             </button>
-            <b class="modal__title">Оставьте свои данные, мы вам перезвоним</b>
+            <div class="modal__title">
+              Оставьте свои данные, мы вам перезвоним
+            </div>
+
             <!-- Form -->
             <form class="order-form">
               <label class="order-form__item">
@@ -118,6 +121,10 @@
                     class="order-form__input"
                     autofocus
                   />
+                  <!-- Input Icon -->
+                  <svg class="input-icon">
+                    <use href="./images/icons/sprites.svg#person"></use>
+                  </svg>
                 </div>
               </label>
               <label class="order-form__item">
@@ -125,6 +132,10 @@
 
                 <div class="order-form__conteiner">
                   <input type="tel" name="phone" class="order-form__input" />
+                  <!-- Input Icon -->
+                  <svg class="input-icon">
+                    <use href="./images/icons/sprites.svg#phone"></use>
+                  </svg>
                 </div>
               </label>
               <label class="order-form__item">
@@ -132,6 +143,10 @@
 
                 <div class="order-form__conteiner">
                   <input type="email" name="email" class="order-form__input" />
+                  <!-- Input Icon -->
+                  <svg class="input-icon">
+                    <use href="./images/icons/sprites.svg#email"></use>
+                  </svg>
                 </div>
               </label>
               <label class="order-form__textarea">
@@ -145,17 +160,18 @@
                 ></textarea>
               </label>
 
+              <!-- Policy checkbox -->
               <label class="order-form__policy">
                 <input
-                class="order-form__checkbox"
+                  class="order-form__checkbox"
                   type="checkbox"
                   name="policy"
                 />
-                <svg class="policy-icon">
-                  <use href="./images/icons/sprites.svg#check"></use>
-                </svg>
-                Соглашаюсь с рассылкой и принимаю
-                <a href="">Условия договора</a>
+                <span class="policy-icon"></span>
+                <p class="policy-text">
+                  Соглашаюсь с рассылкой и принимаю
+                  <a href="">Условия договора</a>
+                </p>
               </label>
               <button type="submit" class="button">Отправить</button>
             </form>
